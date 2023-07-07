@@ -15,12 +15,7 @@ function createGalleryMarkup(galleryData) {
     .join("");
 }
 
-// galleryRef.insertAdjacentHTML("afterbegin", createGalleryMarkup(galleryItems));
-galleryRef.innerHTML = createGalleryMarkup(galleryItems);
-
-galleryRef.addEventListener("click", (event) => {
-  event.preventDefault();
-});
+galleryRef.insertAdjacentHTML("afterbegin", createGalleryMarkup(galleryItems));
 
 const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
